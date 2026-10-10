@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | CampusConnect</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 CampusConnect
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="jobs.html">Jobs</a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+
+			<li>
+			    <a href="applications.html">Applications</a>
+			</li>
+
+			<li>
+			    <a href="#" id="logoutLink">Logout</a>
+			</li>
+        </ul>
+
+    </header>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard-page">
+
+        <div class="dashboard-title">
+
+            <p class="small-text">
+                Welcome back 👋
+            </p>
+
+            <h1>
+                Student Dashboard
+            </h1>
+
+            <p>
+                Manage your profile and track your placement journey.
+            </p>
+
+        </div>
+
+
+        <!-- Student Profile -->
+        <section class="student-profile">
+
+            <div class="student-avatar-large">
+                🎓
+            </div>
+
+            <div class="student-info">
+
+                <h2 id="studentName">
+                    Student Name
+                </h2>
+
+                <p id="studentDepartment">
+                    Department
+                </p>
+
+                <span id="studentStatus" class="status-badge">
+                    ACTIVE
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Profile Information -->
+        <section class="dashboard-section">
+
+            <div class="dashboard-section-title">
+
+                <h2>Profile Information</h2>
+
+                <p>
+                    Your registered student information
+                </p>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+                <div class="profile-item">
+
+                    <span>📧</span>
+
+                    <div>
+                        <small>Email</small>
+                        <strong id="studentEmail">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>📱</span>
+
+                    <div>
+                        <small>Phone</small>
+                        <strong id="studentPhone">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>🎓</span>
+
+                    <div>
+                        <small>Department</small>
+                        <strong id="studentDepartment2">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>📅</span>
+
+                    <div>
+                        <small>Graduation Year</small>
+                        <strong id="studentGraduationYear">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+		<!-- Dashboard Statistics -->
+		<section class="dashboard-section">
+
+		    <div class="dashboard-section-title">
+
+		        <h2>Placement Overview</h2>
+
+		        <p>
+		            Track your placement activity
+		        </p>
+
+		    </div>
+
+		    <div class="overview-grid">
+
+		        <div class="overview-card">
+
+		            <span>💼</span>
+
+		            <strong id="availableJobs">
+		                0
+		            </strong>
+
+		            <p>
+		                Available Jobs
+		            </p>
+
+		        </div>
+
+
+		        <div class="overview-card">
+
+		            <span>📄</span>
+
+		            <strong id="appliedJobs">
+		                0
+		            </strong>
+
+		            <p>
+		                Applications
+		            </p>
+
+		        </div>
+
+
+		        <div class="overview-card">
+
+		            <span>⭐</span>
+
+		            <strong id="shortlistedJobs">
+		                0
+		            </strong>
+
+		            <p>
+		                Shortlisted
+		            </p>
+
+		        </div>
+
+		    </div>
+
+		</section>
+
+
+		<!-- Quick Actions -->
+		<section class="dashboard-section">
+
+		    <div class="dashboard-section-title">
+
+		        <h2>Quick Actions</h2>
+
+		        <p>
+		            Quick access to important placement activities
+		        </p>
+
+		    </div>
+
+		    <div class="quick-actions">
+
+				<a href="jobs.html"
+				   class="btn btn-primary">
+				    🔎 Browse Jobs →
+				</a>
+		        <a href="#"
+		           class="btn btn-secondary">
+		            📄 View Applications
+		        </a>
+
+		    </div>
+
+		</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 CampusConnect. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

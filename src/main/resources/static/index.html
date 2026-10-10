@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect | Student Placement Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 CampusConnect
+        </div>
+
+		
+		<ul class="nav-links" id="navLinks">
+		    <li><a href="index.html">Home</a></li>
+		    <li><a href="jobs.html">Jobs</a></li>
+
+		    <li id="loginLink">
+		        <a href="login.html">Login</a>
+		    </li>
+
+		    <li id="registerLink">
+		        <a href="register.html">Register</a>
+		    </li>
+
+		    <li id="applicationsLink" style="display: none;">
+		        <a href="applications.html">Applications</a>
+		    </li>
+
+		    <li id="dashboardLink" style="display: none;">
+		        <a href="dashboard.html">Dashboard</a>
+		    </li>
+
+		    <li id="logoutLink" style="display: none;">
+		        <a href="#" onclick="logout()">Logout</a>
+		    </li>
+		</ul>
+	
+    </header>
+
+
+	<!-- Hero Section -->
+	<section class="hero">
+
+	    <div class="hero-content">
+
+	        <div class="hero-badge">
+	            🚀 Your Career Starts Here
+	        </div>
+
+	        <h1>
+	            Build Your
+	            <span>Future</span>
+	            With CampusConnect
+	        </h1>
+
+	        <p>
+	            Connect with opportunities, discover your potential,
+	            and take the next step toward your dream career.
+	        </p>
+
+	        <div class="hero-buttons">
+
+				<a href="jobs.html" class="btn btn-primary">
+				    Explore Jobs →
+				</a>
+
+			
+				<a href="register.html"
+				   class="btn btn-secondary"
+				   id="heroRegisterButton">
+				    Register Now →
+				</a>
+			
+	        </div>
+
+	    </div>
+
+
+	    <!-- Dashboard Preview -->
+	    <div class="dashboard-preview">
+
+	        <div class="dashboard-header">
+
+	            <div>
+	                <span class="small-text">Welcome back</span>
+	                <h3>Student Dashboard</h3>
+	            </div>
+
+	            <div class="profile-icon">
+	                👤
+	            </div>
+
+	        </div>
+
+
+	        <div class="profile-card">
+
+	            <div class="student-avatar">
+	                🎓
+	            </div>
+
+	            <div>
+	                <h4>Campus Student</h4>
+	                <p>Computer Science</p>
+	            </div>
+
+	        </div>
+
+
+	        <div class="progress-section">
+
+	            <div class="progress-info">
+	                <span>Profile Completion</span>
+	                <strong>85%</strong>
+	            </div>
+
+	            <div class="progress-bar">
+	                <div class="progress"></div>
+	            </div>
+
+	        </div>
+
+
+	        <div class="dashboard-stats">
+
+	            <div class="mini-card">
+	                <span>💼</span>
+	                <strong>12</strong>
+	                <p>Jobs</p>
+	            </div>
+
+	            <div class="mini-card">
+	                <span>📝</span>
+	                <strong>5</strong>
+	                <p>Applied</p>
+	            </div>
+
+	            <div class="mini-card">
+	                <span>⭐</span>
+	                <strong>3</strong>
+	                <p>Shortlisted</p>
+	            </div>
+
+	        </div>
+
+	    </div>
+
+	</section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>500+</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="stat">
+            <h2>50+</h2>
+            <p>Job Opportunities</p>
+        </div>
+
+        <div class="stat">
+            <h2>200+</h2>
+            <p>Applications</p>
+        </div>
+
+    </section>
+
+
+    <!-- Jobs Section -->
+    <section class="section" id="jobs">
+
+        <div class="section-title">
+
+            <h2>Latest Opportunities</h2>
+
+            <p>
+                Explore the latest opportunities available
+                for students and graduates.
+            </p>
+
+        </div>
+
+
+        <div class="job-container">
+
+            <!-- Job Card 1 -->
+            <div class="job-card">
+
+                <h3>Java Developer</h3>
+
+                <p>
+                    Build scalable backend applications
+                    using Java and Spring Boot.
+                </p>
+
+                <a href="#" class="apply-btn">
+                    View Job
+                </a>
+
+            </div>
+
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+
+                <h3>Full Stack Developer</h3>
+
+                <p>
+                    Work with modern frontend and backend
+                    technologies to build web applications.
+                </p>
+
+                <a href="#" class="apply-btn">
+                    View Job
+                </a>
+
+            </div>
+
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+
+                <h3>Software Engineer</h3>
+
+                <p>
+                    Join a development team and work on
+                    real-world software solutions.
+                </p>
+
+                <a href="#" class="apply-btn">
+                    View Job
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 CampusConnect. All Rights Reserved.
+        </p>
+
+    </footer>
+
+	<script>
+	    document.addEventListener("DOMContentLoaded", function () {
+	        const student = localStorage.getItem("student");
+
+	        const loginLink = document.getElementById("loginLink");
+	        const registerLink = document.getElementById("registerLink");
+	        const applicationsLink = document.getElementById("applicationsLink");
+	        const dashboardLink = document.getElementById("dashboardLink");
+	        const logoutLink = document.getElementById("logoutLink");
+
+	        if (student) {
+	            loginLink.style.display = "none";
+	            registerLink.style.display = "none";
+
+	            applicationsLink.style.display = "block";
+	            dashboardLink.style.display = "block";
+	            logoutLink.style.display = "block";
+	        } else {
+	            loginLink.style.display = "block";
+	            registerLink.style.display = "block";
+
+	            applicationsLink.style.display = "none";
+	            dashboardLink.style.display = "none";
+	            logoutLink.style.display = "none";
+	        }
+	    });
+
+	    function logout() {
+	        localStorage.removeItem("student");
+	        window.location.href = "login.html";
+	    }
+	</script>
+	
+	
+</body>
+
+</html>
